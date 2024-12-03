@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="usuario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Treino</title>
+</head>
+<body>
+    <div class="container">
+        <header class="navegacao">
+            <div class="navegacao-esquerda">
+                <h3>Treino Supremo</h3>
+            </div>
+            <div class="navegacao-direita">
+                <div class="dropdown">
+                    <button onclick="toggleDropdown()" class="dropbtn">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                    <div id="dropdownMenu" class="dropdown-content">
+                        <a href="#">Meus Treinos</a>
+                        <a href="#">Planos</a>
+                        <a href="#">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="corpo">
+            <div class="criar-treino">
+                <h1>Criar Novo Treino</h1>
+                <form id="form-criar-treino">
+                    <div class="form-group">
+                        <label for="nome-treino">Nome do Treino</label>
+                        <input type="text" id="nome-treino" name="nome-treino" placeholder="Ex: Treino de Hipertrofia" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao-treino">Descrição</label>
+                        <textarea id="descricao-treino" name="descricao-treino" placeholder="Descreva o objetivo do treino" required></textarea>
+                    </div>
+                    <div class="exercicios">
+                        <h2>Exercícios</h2>
+                        <div id="lista-exercicios">
+                            <!-- Exercícios serão adicionados aqui -->
+                        </div>
+                        <button type="button" class="btn-adicionar-exercicio" onclick="adicionarExercicio()">
+                            <i class="fa-solid fa-plus"></i> Adicionar Exercício
+                        </button>
+                    </div>
+                    <button type="submit" class="btn-salvar-treino">Salvar Treino</button>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <!-- Rodapé -->
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
